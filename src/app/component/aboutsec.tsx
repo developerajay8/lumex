@@ -1,6 +1,8 @@
 "use client";
+
 import { useState } from "react";
-// import { FaAngleDown } from "react-icons/fa";
+
+
 
 export default function aboutsec() {
   const [showFullContent, setShowFullContent] = useState(false);
