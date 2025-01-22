@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-border-gradient {
+  border-width: 1px;
+  border-image-source: linear-gradient(134.99deg, #FFD700 33.59%, #9575CD 66.41%);
+  border-image-slice: 1;
+  border-radius: 40px;
+  /* background: #323232; */
+}
+
+.bg-first{
+  background: url("/Frame 3384661 (1).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 680px) {
+  .bg-first {
+    background: url("/Frame 3384661 (2).png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Merriweather-Bold';
+  src: url('/fonts/Merriweather-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url('/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* .bg-first{
+  background: url("/Frame 3384661 (2).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* style={{
+  backgroundImage: `url('/Frame 3384661 (1).png')`,
+  backgroundSize: "cover", // Adjusts the image to cover the entire div
+  backgroundPosition: "center", // Centers the image
+  backgroundRepeat: "no-repeat", // Ensures the image doesn't repeat
+}} */
