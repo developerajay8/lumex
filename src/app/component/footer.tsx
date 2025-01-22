@@ -25,7 +25,12 @@ export default function Sidebar() {
           <div className="flex items-center mt-[16px] gap-4">
             <img src="/Link - icon.png" alt="" />
             <img src="/Link - icon (1).png" alt="" />
+            <a href="https://www.instagram.com/aasvaainnovlabs?igsh=MTd4dTIxdGRmeXc0aA==">
             <img src="/Link - icon (2).png" alt="" />
+            </a>
+            <a href="Https://x.com/aasvaainnovlabs">
+            <img src="/Frame 105.png" alt="" />
+            </a>
           </div>
         </div>
 
@@ -162,7 +167,12 @@ export default function Sidebar() {
             <div className="flex items-center mt-[16px] gap-4">
               <img src="/Link - icon.png" alt="" />
               <img src="/Link - icon (1).png" alt="" />
-              <img src="/Link - icon (2).png" alt="" />
+              <a href="https://www.instagram.com/aasvaainnovlabs?igsh=MTd4dTIxdGRmeXc0aA==">
+            <img src="/Link - icon (2).png" alt="" />
+            </a>
+            <a href="Https://x.com/aasvaainnovlabs">
+            <img src="/Frame 105.png" alt="" />
+            </a>
             </div>
           </div>
 
@@ -183,7 +193,7 @@ export default function Sidebar() {
                 <li className="flex items-center py-[8px] gap-4 text-[#F3F3F3] text-[18px] font-[400] ">
                   <img src="/Icon.png" alt="" />
                   <a href="#" className="border-b-2">
-                    How it works
+                    How it Works
                   </a>
                 </li>
                 <li className="flex items-center py-[8px] gap-4 text-[#F3F3F3] text-[18px] font-[400] ">
@@ -195,7 +205,7 @@ export default function Sidebar() {
                 <li className="flex items-center py-[8px] gap-4 text-[#F3F3F3] text-[18px] font-[400] ">
                   <img src="/Icon.png" alt="" />
                   <a href="#" className="border-b-2">
-                    Enrich your experiences
+                    Enrich your Experiences
                   </a>
                 </li>
                 <li className="flex items-center py-[8px] gap-4 text-[#F3F3F3] text-[18px] font-[400] ">

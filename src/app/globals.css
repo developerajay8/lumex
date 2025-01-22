@@ -18,6 +18,13 @@
   background-repeat: no-repeat;
 }
 
+.bgt{
+  background: url("/Frame 41.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 680px) {
   .bg-first {
     background: url("/Frame 3384661 (2).png");
