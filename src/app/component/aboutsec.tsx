@@ -28,17 +28,29 @@ export default function Aboutsec() {
       }
     }
 
-    const links = document.querySelectorAll('a[href^="#"]')
-    links.forEach((link) => {
-      link.addEventListener("click", smoothScroll)
-    })
+  //   const links = document.querySelectorAll('a[href^="#"]')
+  //   links.forEach((link) => {
+  //     link.addEventListener("click", smoothScroll)
+  //   })
 
-    return () => {
-      links.forEach((link) => {
-        link.removeEventListener("click", smoothScroll)
-      })
-    }
-  }, [])
+  //   return () => {
+  //     links.forEach((link) => {
+  //       link.removeEventListener("click", smoothScroll)
+  //     })
+  //   }
+  // }, [])
+
+  const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
+  links.forEach((link) => {
+    link.addEventListener("click", smoothScroll as EventListener)
+  })
+
+  return () => {
+    links.forEach((link) => {
+      link.removeEventListener("click", smoothScroll as EventListener)
+    })
+  }
+}, [])
 
   return (
     <>
