@@ -85,19 +85,20 @@ export default function Sidebar() {
 
             <div className="pt-[10px] ">
               <p className="text-[16px] font-[500] text-[#F3F3F3] ">
-                Lorem Ipsum is simply <br /> dummy text of the
+                Our services are proudly utilized by the CMO of rajasthan
               </p>
               <span className="text-[#FF371A] text-[15px] font-[400] ">
-                July 5, 2022
+              January 22, 2025
               </span>
             </div>
 
             <div className="pt-[14px] ">
               <p className="text-[16px] font-[500] text-[#F3F3F3] ">
-                Lorem Ipsum is simply <br /> dummy text of the
+              Rajasthan Eyes AI Township: Piyush Goyal.. 
+
               </p>
               <span className="text-[#FF371A] text-[15px] font-[400] ">
-                July 5, 2022
+                January 16, 2025
               </span>
             </div>
           </div>
@@ -127,7 +128,7 @@ export default function Sidebar() {
             <div className="pt-[14px] flex items-start  gap-4">
               <img src="/Vector (2).png" alt="" className="pt-[5px]" />
               <span className="text-[18px] text-[#F3F3F3] font-[400] ">
-                BTH Sansthan Path, Malviya Nagar, Jaipur,
+                Sansthan Path, Malviya Nagar, Jaipur,
                 Rajasthan 302017
               </span>
             </div>
@@ -227,19 +228,21 @@ export default function Sidebar() {
 
               <div className="pt-[10px] ">
                 <p className="text-[16px] font-[500] text-[#F3F3F3] ">
-                  Lorem Ipsum is simply <br /> dummy text of the
+                  
+                  Our services are proudly <br /> utilized by the CMO of rajasthan
                 </p>
                 <span className="text-[#FF371A] text-[15px] font-[400] ">
-                  July 5, 2022
+                January 22, 2025
                 </span>
               </div>
 
               <div className="pt-[14px] ">
                 <p className="text-[16px] font-[500] text-[#F3F3F3] ">
-                  Lorem Ipsum is simply <br /> dummy text of the
+                Rajasthan Eyes AI Township: 
+                <br /> Piyush Goyal.. 
                 </p>
                 <span className="text-[#FF371A] text-[15px] font-[400] ">
-                  July 5, 2022
+                January 16, 2025
                 </span>
               </div>
             </div>

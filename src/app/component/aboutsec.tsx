@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import Link from "next/link"
 
 
 export default function Aboutsec() {
@@ -10,6 +10,35 @@ export default function Aboutsec() {
   const fullContent =
     "Enhance your business with our revolutionary AI solution which boosts revenue, cuts costs, and drives unparalleled growth. Experience the fastest and smartest solutions at your fingertips.";
   const truncatedContent = fullContent.split(" ").slice(0,15).join(" ") + "...";
+
+
+  useEffect(() => {
+    const smoothScroll = (e: MouseEvent) => {
+      e.preventDefault()
+      const target = e.target as HTMLAnchorElement
+      const targetId = target.getAttribute("href")
+      if (targetId) {
+        const element = document.querySelector(targetId)
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          })
+        }
+      }
+    }
+
+    const links = document.querySelectorAll('a[href^="#"]')
+    links.forEach((link) => {
+      link.addEventListener("click", smoothScroll)
+    })
+
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", smoothScroll)
+      })
+    }
+  }, [])
 
   return (
     <>
@@ -86,26 +115,29 @@ export default function Aboutsec() {
       >
         <nav className="flex items-center justify-between py-[48px] max-w-[1061px] mx-auto overflow-x-auto gap-4 ">
           <button className="px-6 py-2 bg-[#323232]/10 text-[#FF371A] rounded-lg underline whitespace-nowrap text-[14px] font-[600] ">
-            Overview
+            
+            <Link href="#overview">Overview</Link>
           </button>
           <button className="text-[14px] font-[600]  px-6 py-2 text-[#FFFFFF] hover:text-white transition-colors whitespace-nowrap">
-            How it Works
+            <Link href="#howitwork">How it Works</Link>
           </button>
           <button className="text-[14px] font-[600]  px-6 py-2 text-[#FFFFFF] hover:text-white transition-colors whitespace-nowrap">
-            Features
+            <Link href="#features">Features</Link>
           </button>
           <button className="text-[14px] font-[600]  px-6 py-2 text-[#FFFFFF] hover:text-white transition-colors whitespace-nowrap">
-            Enrich your Experiences
+            <Link href="#enrich">Enrich your Experiences</Link>
+
           </button>
           <button className="text-[14px] font-[600]  px-6 py-2 bg-gradient-to-r from-yellow-400 to-purple-500 text-[#FFFFFF] rounded-lg whitespace-nowrap">
-            Arrange Discovery
+            
+            <Link href="#arrange">Arrange Discovery</Link>
           </button>
         </nav>
       </div>
 
       <div className="bg-[#222222] py-12 relative">
         <div className="max-w-[1061px] mx-auto xl:px-[0px] px-[20px] ">
-          <h4 className="sm:text-[36px] text-[28px] text-center leading-[45px] font-merriweather text-[#FFFFFF]">
+          <h4 id="overview" className="sm:text-[36px] text-[28px] text-center leading-[45px] font-merriweather text-[#FFFFFF]">
             About Aasvaa
           </h4>
           <p className="max-w-[761px] text-center pt-[10px] mx-auto sm:text-[18px] text-[14px] text-[#FFFFFF] font-[400]">
@@ -216,7 +248,7 @@ export default function Aboutsec() {
       <div className="bg-[#222222] xl:px-0 px-[20px]">
         <div className="max-w-[1088px] mx-auto sm:py-[80px] py-[20px]">
           <img src="/Frame 3384538 (4).png" className="mx-auto" alt="" />
-          <p className="sm:text-[36px] text-[28px] pt-[20px] text-white font-merriweather text-center">
+          <p id="howitwork" className="sm:text-[36px] text-[28px] pt-[20px] text-white font-merriweather text-center">
             How it Works
           </p>
           <div className="sm:block hidden">
@@ -375,7 +407,7 @@ export default function Aboutsec() {
               className="mx-auto pb-[10px] "
               alt=""
             />
-            <h4 className="sm:text-[44px] font-merriweather text-[28px] text-[#FFFFFF] text-center sm:leading-[52px] leading-[35px] pt-[10px]">
+            <h4 id="features" className="sm:text-[44px] font-merriweather text-[28px] text-[#FFFFFF] text-center sm:leading-[52px] leading-[35px] pt-[10px]">
               Unleash, Unlock and <br className="sm:hidden block" /> Uplift{" "}
               <br className="sm:block hidden" />
               with Timeless AI
@@ -443,7 +475,7 @@ export default function Aboutsec() {
       <div className="bg-[#222222]">
         <div className="py-12 max-w-[1084px] mx-auto  ">
           <div className="">
-            <h3 className="sm:text-[44px] text-[28px] font-merriweather text-[#FFFFFF] sm:leading-[55px] leading-[35px] font-[700] text-center">
+            <h3 id="enrich" className="sm:text-[44px] text-[28px] font-merriweather text-[#FFFFFF] sm:leading-[55px] leading-[35px] font-[700] text-center">
               Enrich your Experiences
             </h3>
           </div>
@@ -501,7 +533,7 @@ export default function Aboutsec() {
         <div className="max-w-[1088px] mx-auto py-12">
           <div className="max-w-[860px] mx-auto ">
             <img src="/Frame 3384538 (1).png" className="mx-auto" alt="" />
-            <h3 className="sm:text-[44px] text-[28px] pt-[18px] text-center sm:leading-[45px] leading-[35px] font-merriweather font-[700] text-[#FFFFFF]">
+            <h3 id="arrange" className="sm:text-[44px] text-[28px] pt-[18px] text-center sm:leading-[45px] leading-[35px] font-merriweather font-[700] text-[#FFFFFF]">
               Explore the <br className="sm:hidden block" /> possibilities of
               AI, <br className="sm:hidden block" /> from Moments to{" "}
               <br className="sm:hidden block" /> Memories
