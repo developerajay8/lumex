@@ -16,7 +16,7 @@ export default function Sidebar() {
     <>
       <div className="py-12 px-6 bg-black sm:hidden block">
         <div className="">
-          <img src="/Rectangle 23 (2).png" alt="" />
+          <img src="/Group 44 1 (1).png" alt="" />
           <div className="pt-[10px] max-w-[250px]">
             <p className="text-[#F3F3F3] text-[18px] leading-[28px] font-[400 ]">
             Welcome to Aasvaa Universal, where AI, ML, and computer vision power innovation to simplify, enrich, and empower.
@@ -120,15 +120,15 @@ export default function Sidebar() {
             <div className="pt-[14px] flex items-center gap-4">
               <img src="/Icon (2).png" alt="" />
               <span className="text-[18px] text-[#F3F3F3] font-[400] ">
-                needhelp@company.com
+              Shivang.jain@aasvaalabs.com 
               </span>
             </div>
 
             <div className="pt-[14px] flex items-start  gap-4">
               <img src="/Vector (2).png" alt="" className="pt-[5px]" />
               <span className="text-[18px] text-[#F3F3F3] font-[400] ">
-                3rd Floor, BTH Sansthan <br /> Path, Malviya Nagar, Jaipur,{" "}
-                <br /> Rajasthan 302017
+                BTH Sansthan Path, Malviya Nagar, Jaipur,
+                Rajasthan 302017
               </span>
             </div>
 
@@ -158,7 +158,7 @@ export default function Sidebar() {
       <div className="py-12 sm:block hidden bg-black max-w-[1040px] mx-auto xl:px-[0px] px-[20px]">
         <div className="flex gap-10">
           <div className="">
-            <img src="/Rectangle 23 (2).png" alt="" />
+            <img src="/Group 44 1.png" alt="" />
             <div className="pt-[10px] max-w-[250px]">
               <p className="text-[#F3F3F3] text-[18px] leading-[28px] font-[400 ]">
               Welcome to Aasvaa Universal, where AI, ML, and computer vision power innovation to simplify, enrich, and empower.
@@ -262,15 +262,15 @@ export default function Sidebar() {
               <div className="pt-[14px] flex items-center gap-4">
                 <img src="/Icon (2).png" alt="" />
                 <span className="text-[18px] text-[#F3F3F3] font-[400] ">
-                  needhelp@company.com
+                Shivang.jain@aasvaalabs.com 
                 </span>
               </div>
 
               <div className="pt-[14px] flex items-start  gap-4">
                 <img src="/Vector (2).png" alt="" className="pt-[5px]" />
                 <span className="text-[18px] text-[#F3F3F3] font-[400] ">
-                  3rd Floor, BTH Sansthan <br /> Path, Malviya Nagar, Jaipur,{" "}
-                  <br /> Rajasthan 302017
+                 Sansthan Path, Malviya Nagar, Jaipur,
+                  Rajasthan 302017
                 </span>
               </div>
 

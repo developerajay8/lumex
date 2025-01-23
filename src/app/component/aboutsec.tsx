@@ -450,12 +450,12 @@ export default function Aboutsec() {
 
           <div className="sm:block hidden">
             <div className="pt-[50px] flex flex-wrap mx-auto gap-5">
-              <img src="/Frame 3384670.png" alt="" />
-              <img src="/Frame 3384669.png" alt="" />
-              <img src="/Frame 3384669 (1).png" alt="" />
-              <img src="/Frame 3384669 (2).png" alt="" />
-              <img src="/Frame 3384670 (3).png" alt="" />
-              <img src="/Frame 3384670 (2).png" alt="" />
+              <img src="/Frame 3384670 (4).png" alt="" />
+              <img src="/Frame 3384669 (3).png" alt="" />
+              <img src="/Frame 3384669 (4).png" alt="" />
+              <img src="/Frame 3384669 (5).png" alt="" />
+              <img src="/Frame 3384670 (5).png" alt="" />
+              <img src="/Frame 3384670 (6).png" alt="" />
             </div>
           </div>
 
