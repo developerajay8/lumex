@@ -18,8 +18,8 @@ export default function Sidebar() {
         <div className="">
           <img src="/Group 44 1 (1).png" alt="" />
           <div className="pt-[10px] max-w-[250px]">
-            <p className="text-[#F3F3F3] text-[18px] leading-[28px] font-[400 ]">
-            Welcome to Aasvaa Universal, where AI, ML, and computer vision power innovation to simplify, enrich, and empower.
+            <p className="text-[#F3F3F3] text-[18px] leading-[28px] text-justify font-[400 ]">
+            Welcome to Aasvaa Universal, where AI, ML, and computer vision power innovation to simplify, enrich, and empower.
             </p>
           </div>
           <div className="flex items-center mt-[16px] gap-4">
@@ -160,8 +160,8 @@ export default function Sidebar() {
           <div className="">
             <img src="/Group 44 1.png" alt="" />
             <div className="pt-[10px] max-w-[250px]">
-              <p className="text-[#F3F3F3] text-[18px] leading-[28px] font-[400 ]">
-              Welcome to Aasvaa Universal, where AI, ML, and computer vision power innovation to simplify, enrich, and empower.
+              <p className="text-[#F3F3F3] text-justify text-[18px] leading-[28px] font-[400 ]">
+              Welcome to Aasvaa Universal, where AI, ML, and computer vision power innovation to simplify, enrich, and empower.
               </p>
             </div>
             <div className="flex items-center mt-[16px] gap-4">
