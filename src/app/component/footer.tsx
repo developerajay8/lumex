@@ -76,7 +76,7 @@ export default function Sidebar() {
           </div>
         </div>
 
-        <div className="pt-[20px] ">
+        {/* <div className="pt-[20px] ">
           <div className="">
             <h4 className="text-[22px] font-[700] leading-[27px] pb-[6px] text-[#FFFFFF] ">
               News
@@ -102,7 +102,7 @@ export default function Sidebar() {
               </span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="pt-[20px] ">
           <div className="">
@@ -160,7 +160,7 @@ export default function Sidebar() {
         <div className="flex gap-10">
           <div className="">
             <img src="/Group 44 1.png" alt="" />
-            <div className="pt-[10px] max-w-[250px]">
+            <div className="pt-[10px] max-w-[390px]">
               <p className="text-[#F3F3F3]  text-[18px] leading-[28px] font-[400 ]">
               Welcome to Aasvaa Universal, where AI, ML, and computer vision power innovation to simplify, enrich, and empower.
               </p>
@@ -219,7 +219,7 @@ export default function Sidebar() {
             </div>
           </div>
 
-          <div className=" ">
+          {/* <div className=" ">
             <div className="">
               <h4 className="text-[22px] font-[700] leading-[27px] pb-[6px] text-[#FFFFFF] ">
                 News
@@ -246,7 +246,7 @@ export default function Sidebar() {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className=" ">
             <div className="">
@@ -272,7 +272,7 @@ export default function Sidebar() {
               <div className="pt-[14px] flex items-start  gap-4">
                 <img src="/Vector (2).png" alt="" className="pt-[5px]" />
                 <span className="text-[18px] text-[#F3F3F3] font-[400] ">
-                 Sansthan Path, Malviya Nagar, Jaipur,
+                 Sansthan Path, Malviya Nagar, <br /> Jaipur,
                   Rajasthan 302017
                 </span>
               </div>

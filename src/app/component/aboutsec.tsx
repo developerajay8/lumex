@@ -52,6 +52,20 @@ export default function Aboutsec() {
   }
 }, [])
 
+const [activeButton, setActiveButton] = useState("overview")
+
+const handleClick = (buttonId: string) => {
+  setActiveButton(buttonId)
+}
+
+const getButtonClass = (buttonId: string) => {
+  const baseClass = "text-[14px] font-[600] px-6 py-2 rounded-lg whitespace-nowrap transition-colors"
+  if (buttonId === activeButton) {
+    return `${baseClass} bg-[#323232]/10 text-[#FF371A] underline`
+  }
+  return `${baseClass} text-[#FFFFFF] hover:text-white`
+}
+
   return (
     <>
       <div className=" bg-first  ">
@@ -125,26 +139,26 @@ export default function Aboutsec() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <nav className="flex items-center justify-between py-[48px] max-w-[1061px] mx-auto overflow-x-auto gap-4 ">
-          <button className="px-6 py-2 bg-[#323232]/10 text-[#FF371A] rounded-lg underline whitespace-nowrap text-[14px] font-[600] ">
-            
-            <Link href="#overview">Overview</Link>
-          </button>
-          <button className="text-[14px] font-[600]  px-6 py-2 text-[#FFFFFF] hover:text-white transition-colors whitespace-nowrap">
-            <Link href="#howitwork">How it Works</Link>
-          </button>
-          <button className="text-[14px] font-[600]  px-6 py-2 text-[#FFFFFF] hover:text-white transition-colors whitespace-nowrap">
-            <Link href="#features">Features</Link>
-          </button>
-          <button className="text-[14px] font-[600]  px-6 py-2 text-[#FFFFFF] hover:text-white transition-colors whitespace-nowrap">
-            <Link href="#enrich">Enrich your Experiences</Link>
-
-          </button>
-          <button className="text-[14px] font-[600]  px-6 py-2 bg-gradient-to-r from-yellow-400 to-purple-500 text-[#FFFFFF] rounded-lg whitespace-nowrap">
-            
-            <Link href="#arrange">Arrange Discovery</Link>
-          </button>
-        </nav>
+         <nav className="flex items-center justify-between sm:py-[48px] py-[16px] max-w-[1061px] mx-auto overflow-x-auto gap-4">
+      <button className={getButtonClass("overview")} onClick={() => handleClick("overview")}>
+        <Link href="#overview">Overview</Link>
+      </button>
+      <button className={getButtonClass("howitwork")} onClick={() => handleClick("howitwork")}>
+        <Link href="#howitwork">How it Works</Link>
+      </button>
+      <button className={getButtonClass("features")} onClick={() => handleClick("features")}>
+        <Link href="#features">Features</Link>
+      </button>
+      <button className={getButtonClass("enrich")} onClick={() => handleClick("enrich")}>
+        <Link href="#enrich">Enrich your Experiences</Link>
+      </button>
+      <button
+        className={`text-[14px] font-[600] px-6 py-2 bg-gradient-to-r from-yellow-400 to-purple-500 text-[#FFFFFF] rounded-lg whitespace-nowrap`}
+        onClick={() => handleClick("arrange")}
+      >
+        <Link href="#arrange">Arrange Discovery</Link>
+      </button>
+    </nav>
       </div>
 
       <div className="bg-[#222222] py-12 relative">
