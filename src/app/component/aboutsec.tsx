@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link"
 
-import { Merriweather } from '@next/font/google';
+import { Merriweather } from 'next/font/google';
 
 const merriweather = Merriweather({
   subsets: ['latin'],
