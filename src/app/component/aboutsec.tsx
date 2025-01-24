@@ -37,18 +37,7 @@ export default function Aboutsec() {
         }
       }
     }
-
-  //   const links = document.querySelectorAll('a[href^="#"]')
-  //   links.forEach((link) => {
-  //     link.addEventListener("click", smoothScroll)
-  //   })
-
-  //   return () => {
-  //     links.forEach((link) => {
-  //       link.removeEventListener("click", smoothScroll)
-  //     })
-  //   }
-  // }, [])
+    
 
   const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
   links.forEach((link) => {
@@ -77,7 +66,7 @@ const getButtonClass = (buttonId: string) => {
 }
 
   return (
-    <div className={merriweather.className}>
+    <div>
       <div className=" bg-first  ">
         <div className="py-[80px] max-w-[858px] xl:px-0 px-[16px] mx-auto  ">
           <div className="">
@@ -569,6 +558,7 @@ const getButtonClass = (buttonId: string) => {
         <div className="max-w-[1088px] mx-auto py-12">
           <div className="max-w-[860px] mx-auto ">
             <img src="/Frame 3384538 (1).png" className="mx-auto" alt="" />
+            
             <div className={merriweather.className}>
             <h3 id="arrange" className="sm:text-[44px] text-[28px] pt-[18px] text-center sm:leading-[45px] leading-[35px] font-merriweather font-[700] text-[#FFFFFF]">
               Explore the <br className="sm:hidden block" /> possibilities of
@@ -576,6 +566,7 @@ const getButtonClass = (buttonId: string) => {
               <br className="sm:hidden block" /> Memories
             </h3>
             </div>
+
             <p className="max-w-[761px] text-center pt-[18px] mx-auto sm:text-[18px] text-[14px] text-[#FFFFFF] font-[400]">
               Discover our AI-driven solutions designed to{" "}
               <br className="sm:hidden block" /> optimize and elevate business
