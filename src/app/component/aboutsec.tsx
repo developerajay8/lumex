@@ -77,7 +77,7 @@ const getButtonClass = (buttonId: string) => {
 }
 
   return (
-    <div >
+    <div className={merriweather.className}>
       <div className=" bg-first  ">
         <div className="py-[80px] max-w-[858px] xl:px-0 px-[16px] mx-auto  ">
           <div className="">

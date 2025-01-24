@@ -1,4 +1,4 @@
-// import { Merriweather } from "next/font/google";
+import { Merriweather } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 export default {
