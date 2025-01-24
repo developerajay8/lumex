@@ -252,7 +252,7 @@ const getButtonClass = (buttonId: string) => {
             <div className="sm:flex max-w-[1084px] mx-auto relative gap-10 pt-[32px]">
 
               <div className="pt-[20px]">
-                <h4 className="text-[#ffffff] font-merriweather sm:text-[36px] text-[28px]  py-[10px] ">
+                <h4 className="text-[#ffffff] font-merriweather font-bold sm:text-[36px] text-[28px]  py-[10px] ">
                   Video Feature
                 </h4>
                 <p className="max-w-[439px] text-[#BCBBC0] sm:text-[18px] text-[14px] leading-[21px] font-[400] ">
@@ -569,11 +569,13 @@ const getButtonClass = (buttonId: string) => {
         <div className="max-w-[1088px] mx-auto py-12">
           <div className="max-w-[860px] mx-auto ">
             <img src="/Frame 3384538 (1).png" className="mx-auto" alt="" />
+            <div className={merriweather.className}>
             <h3 id="arrange" className="sm:text-[44px] text-[28px] pt-[18px] text-center sm:leading-[45px] leading-[35px] font-merriweather font-[700] text-[#FFFFFF]">
               Explore the <br className="sm:hidden block" /> possibilities of
               AI, <br className="sm:hidden block" /> from Moments to{" "}
               <br className="sm:hidden block" /> Memories
             </h3>
+            </div>
             <p className="max-w-[761px] text-center pt-[18px] mx-auto sm:text-[18px] text-[14px] text-[#FFFFFF] font-[400]">
               Discover our AI-driven solutions designed to{" "}
               <br className="sm:hidden block" /> optimize and elevate business
