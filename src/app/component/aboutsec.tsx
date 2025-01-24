@@ -1,69 +1,67 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link"
+import Link from "next/link";
 
-import { Merriweather } from 'next/font/google';
+import { Merriweather } from "next/font/google";
 
 const merriweather = Merriweather({
-  subsets: ['latin'],
-  weight: ['300', '400', '700', '900'],
-  style: ['normal', 'italic'],
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["300", "400", "700", "900"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
-
-
 
 export default function Aboutsec() {
   const [showFullContent, setShowFullContent] = useState(false);
 
   const fullContent =
     "Enhance your business with our revolutionary AI solution which boosts revenue, cuts costs, and drives unparalleled growth. Experience the fastest and smartest solutions at your fingertips.";
-  const truncatedContent = fullContent.split(" ").slice(0,15).join(" ") + "...";
-
+  const truncatedContent =
+    fullContent.split(" ").slice(0, 15).join(" ") + "...";
 
   useEffect(() => {
     const smoothScroll = (e: MouseEvent) => {
-      e.preventDefault()
-      const target = e.target as HTMLAnchorElement
-      const targetId = target.getAttribute("href")
+      e.preventDefault();
+      const target = e.target as HTMLAnchorElement;
+      const targetId = target.getAttribute("href");
       if (targetId) {
-        const element = document.querySelector(targetId)
+        const element = document.querySelector(targetId);
         if (element) {
           element.scrollIntoView({
             behavior: "smooth",
             block: "start",
-          })
+          });
         }
       }
-    }
-    
+    };
 
-  const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')
-  links.forEach((link) => {
-    link.addEventListener("click", smoothScroll as EventListener)
-  })
-
-  return () => {
+    const links = document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
     links.forEach((link) => {
-      link.removeEventListener("click", smoothScroll as EventListener)
-    })
-  }
-}, [])
+      link.addEventListener("click", smoothScroll as EventListener);
+    });
 
-const [activeButton, setActiveButton] = useState("overview")
+    return () => {
+      links.forEach((link) => {
+        link.removeEventListener("click", smoothScroll as EventListener);
+      });
+    };
+  }, []);
 
-const handleClick = (buttonId: string) => {
-  setActiveButton(buttonId)
-}
+  const [activeButton, setActiveButton] = useState("overview");
 
-const getButtonClass = (buttonId: string) => {
-  const baseClass = "text-[14px] font-[600] px-6 py-2 rounded-lg whitespace-nowrap transition-colors"
-  if (buttonId === activeButton) {
-    return `${baseClass} bg-gradient-to-r from-yellow-400 to-purple-500 text-[white] underline`
-  }
-  return `${baseClass} text-[#FFFFFF] hover:text-white`
-}
+  const handleClick = (buttonId: string) => {
+    setActiveButton(buttonId);
+  };
+
+  const getButtonClass = (buttonId: string) => {
+    const baseClass =
+      "text-[14px] font-[600] px-6 py-2 rounded-lg whitespace-nowrap transition-colors";
+    if (buttonId === activeButton) {
+      return `${baseClass} bg-[#222222] text-[#FF371A] underline`;
+    }
+    return `${baseClass} text-[#FFFFFF] hover:text-white`;
+  };
 
   return (
     <div>
@@ -127,8 +125,6 @@ const getButtonClass = (buttonId: string) => {
         </div>
       </div>
 
-
-
       <div
         className="bg-[black]"
         style={{
@@ -138,36 +134,51 @@ const getButtonClass = (buttonId: string) => {
           backgroundRepeat: "no-repeat",
         }}
       >
-         <nav className="flex items-center justify-between sm:py-[48px] py-[16px] max-w-[1061px] mx-auto overflow-x-auto gap-4">
-      <button className={getButtonClass("overview")} onClick={() => handleClick("overview")}>
-        <Link href="#overview">Overview</Link>
-      </button>
-      <button className={getButtonClass("howitwork")} onClick={() => handleClick("howitwork")}>
-        <Link href="#howitwork">How it Works</Link>
-      </button>
-      <button className={getButtonClass("features")} onClick={() => handleClick("features")}>
-        <Link href="#features">Features</Link>
-      </button>
-      <button className={getButtonClass("enrich")} onClick={() => handleClick("enrich")}>
-        <Link href="#enrich">Enrich your Experiences</Link>
-      </button>
-      <button
-        className={`text-[14px] font-[600] px-6 py-2 text-[#FFFFFF] rounded-lg whitespace-nowrap`}
-        onClick={() => handleClick("arrange")}
-      >
-        <Link href="#arrange">Arrange Discovery</Link>
-      </button>
-    </nav>
+        <nav className="flex items-center justify-between sm:py-[48px] xl:px-0 px-[20px] py-[16px] max-w-[1061px] mx-auto overflow-x-auto gap-4">
+          <button
+            className={getButtonClass("overview")}
+            onClick={() => handleClick("overview")}
+          >
+            <Link href="#overview">Overview</Link>
+          </button>
+          <button
+            className={getButtonClass("howitwork")}
+            onClick={() => handleClick("howitwork")}
+          >
+            <Link href="#howitwork">How it Works</Link>
+          </button>
+          <button
+            className={getButtonClass("features")}
+            onClick={() => handleClick("features")}
+          >
+            <Link href="#features">Features</Link>
+          </button>
+          <button
+            className={getButtonClass("enrich")}
+            onClick={() => handleClick("enrich")}
+          >
+            <Link href="#enrich">Enrich your Experiences</Link>
+          </button>
+          <button
+            className={`text-[14px] font-[600] px-6 py-2 text-[#FFFFFF] bg-gradient-to-r from-yellow-400 to-purple-500 rounded-lg whitespace-nowrap`}
+            onClick={() => handleClick("arrange")}
+          >
+            <Link href="#arrange">Arrange Discovery</Link>
+          </button>
+        </nav>
       </div>
 
       <div className="bg-[#222222] py-12 relative">
         <div className="max-w-[1061px] mx-auto xl:px-[0px] px-[20px] ">
-          <h4 id="overview" className="sm:text-[36px] text-[28px] text-center leading-[45px] font-merriweather text-[#FFFFFF]">
+          <h4
+            id="overview"
+            className="sm:text-[36px] text-[28px] text-center leading-[45px] font-merriweather text-[#FFFFFF]"
+          >
             About Aasvaa
           </h4>
           <p className="max-w-[761px] text-center pt-[10px] mx-auto sm:text-[18px] text-[14px] text-[#FFFFFF] font-[400]">
-            At Aasvaa Universal Pvt Ltd. we deliver AI-driven SaaS
-            solutions empowering businesses to boost revenue, enhance customer
+            At Aasvaa Universal Pvt Ltd. we deliver AI-driven SaaS solutions
+            empowering businesses to boost revenue, enhance customer
             experiences, and scale in competitive markets.
           </p>
 
@@ -198,14 +209,14 @@ const getButtonClass = (buttonId: string) => {
                     onClick={() => setShowFullContent(!showFullContent)}
                     className="cursor-pointer ml-2"
                   /> */}
-                  {
-                    !showFullContent ? (<img
+                  {!showFullContent ? (
+                    <img
                       src="/Frame 3384727.png"
                       alt="Expand content"
                       onClick={() => setShowFullContent(!showFullContent)}
                       className="cursor-pointer ml-2"
-                    />):null}
-
+                    />
+                  ) : null}
                 </p>
               </div>
             </div>
@@ -224,14 +235,14 @@ const getButtonClass = (buttonId: string) => {
                   Video Feature
                 </h4>
                 <p className="max-w-[439px] text-[#BCBBC0] sm:text-[18px] text-[14px] leading-[21px] font-[400] ">
-                  Empowering users with AI-driven face recognition to effortlessly
-                  scan, identify, and{" "}
+                  Empowering users with AI-driven face recognition to
+                  effortlessly scan, identify, and{" "}
                   <span className="text-[#F3CF00] ">
                     access video clips featuring their faces.{" "}
                   </span>{" "}
                   Our technology enables precise editing, seamless adjustments,
-                  and efficient downloading of video segments, ensuring a tailored
-                  and streamlined experience
+                  and efficient downloading of video segments, ensuring a
+                  tailored and streamlined experience
                 </p>
               </div>
             </div>
@@ -239,21 +250,20 @@ const getButtonClass = (buttonId: string) => {
 
           <div className="sm:hidden block ">
             <div className="sm:flex max-w-[1084px] mx-auto relative gap-10 pt-[32px]">
-
               <div className="pt-[20px]">
                 <h4 className="text-[#ffffff] font-merriweather font-bold sm:text-[36px] text-[28px]  py-[10px] ">
                   Video Feature
                 </h4>
                 <p className="max-w-[439px] text-[#BCBBC0] sm:text-[18px] text-[14px] leading-[21px] font-[400] ">
-                  Empowering users with AI-driven face recognition to effortlessly
-                  scan, identify, and{" "}
+                  Empowering users with AI-driven face recognition to
+                  effortlessly scan, identify, and{" "}
                   <span className="text-[#F3CF00] ">
                     {" "}
                     access video clips featuring their faces.{" "}
                   </span>{" "}
                   Our technology enables precise editing, seamless adjustments,
-                  and efficient downloading of video segments, ensuring a tailored
-                  and streamlined experience
+                  and efficient downloading of video segments, ensuring a
+                  tailored and streamlined experience
                 </p>
               </div>
               <div className="z-10 pt-[10px]  ">
@@ -261,9 +271,6 @@ const getButtonClass = (buttonId: string) => {
               </div>
             </div>
           </div>
-
-
-
         </div>
         <div className="absolute sm:bottom-0 bottom-[50px]">
           <img src="/Frame 1.png" alt="" className="w-screen" />
@@ -273,7 +280,10 @@ const getButtonClass = (buttonId: string) => {
       <div className="bg-[#222222] xl:px-0 px-[20px]">
         <div className="max-w-[1088px] mx-auto sm:py-[80px] py-[20px]">
           <img src="/Frame 3384538 (4).png" className="mx-auto" alt="" />
-          <p id="howitwork" className="sm:text-[36px] text-[28px] pt-[20px] text-white font-merriweather text-center">
+          <p
+            id="howitwork"
+            className="sm:text-[36px] text-[28px] pt-[20px] text-white font-merriweather text-center"
+          >
             How it Works
           </p>
           <div className="sm:block hidden">
@@ -432,7 +442,10 @@ const getButtonClass = (buttonId: string) => {
               className="mx-auto pb-[10px] "
               alt=""
             />
-            <h4 id="features" className="sm:text-[44px] font-merriweather text-[28px] text-[#FFFFFF] text-center sm:leading-[52px] leading-[35px] pt-[10px]">
+            <h4
+              id="features"
+              className="sm:text-[44px] font-merriweather text-[28px] text-[#FFFFFF] text-center sm:leading-[52px] leading-[35px] pt-[10px]"
+            >
               Unleash, Unlock and <br className="sm:hidden block" /> Uplift{" "}
               <br className="sm:block hidden" />
               with Timeless AI
@@ -500,7 +513,10 @@ const getButtonClass = (buttonId: string) => {
       <div className="bg-[#222222]">
         <div className="py-12 max-w-[1084px] mx-auto  ">
           <div className="">
-            <h3 id="enrich" className="sm:text-[44px] text-[28px] font-merriweather text-[#FFFFFF] sm:leading-[55px] leading-[35px] font-[700] text-center">
+            <h3
+              id="enrich"
+              className="sm:text-[44px] text-[28px] font-merriweather text-[#FFFFFF] sm:leading-[55px] leading-[35px] font-[700] text-center"
+            >
               Enrich your Experiences
             </h3>
           </div>
@@ -539,7 +555,7 @@ const getButtonClass = (buttonId: string) => {
                 alt=""
               />
               <img
-                src="/Frame 3384670 (1).png"
+                src="/Frame 3384670 (5).png"
                 className="mx-auto pb-[22px]"
                 alt=""
               />
@@ -553,34 +569,37 @@ const getButtonClass = (buttonId: string) => {
         </div>
       </div>
 
-<div className="bg-[#222222] ">
-      <div className=" bgt">
-        <div className="max-w-[1088px] mx-auto py-12">
-          <div className="max-w-[860px] mx-auto ">
-            <img src="/Frame 3384538 (1).png" className="mx-auto" alt="" />
-            
-            <div className={merriweather.className}>
-            <h3 id="arrange" className="sm:text-[44px] text-[28px] pt-[18px] text-center sm:leading-[45px] leading-[35px] font-merriweather font-[700] text-[#FFFFFF]">
-              Explore the <br className="sm:hidden block" /> possibilities of
-              AI, <br className="sm:hidden block" /> from Moments to{" "}
-              <br className="sm:hidden block" /> Memories
-            </h3>
-            </div>
+      <div className="bg-[#222222] ">
+        <div className=" bgt">
+          <div className="max-w-[1088px] mx-auto py-12">
+            <div className="max-w-[860px] mx-auto ">
+              <img src="/Frame 3384538 (1).png" className="mx-auto" alt="" />
 
-            <p className="max-w-[761px] text-center pt-[18px] mx-auto sm:text-[18px] text-[14px] text-[#FFFFFF] font-[400]">
-              Discover our AI-driven solutions designed to{" "}
-              <br className="sm:hidden block" /> optimize and elevate business
-              operations, <br className="sm:hidden block" /> empowering
-              organizations with advanced <br className="sm:hidden block" />
-              capabilities and efficiency.
-            </p>
+              <div className={merriweather.className}>
+                <h3
+                  id="arrange"
+                  className="sm:text-[44px] text-[28px] pt-[18px] text-center sm:leading-[45px] leading-[35px] font-merriweather font-[700] text-[#FFFFFF]"
+                >
+                  Explore the <br className="sm:hidden block" /> possibilities
+                  of AI, <br className="sm:hidden block" /> from Moments to{" "}
+                  <br className="sm:hidden block" /> Memories
+                </h3>
+              </div>
 
-            <div className="bg-[#FF371A] mt-[25px] text-white rounded-[10px] max-w-[200px] text-center py-3 font-[400]  mx-auto">
-              <a href="">Arrange Discovery</a>
+              <p className="max-w-[761px] text-center pt-[18px] mx-auto sm:text-[18px] text-[14px] text-[#FFFFFF] font-[400]">
+                Discover our AI-driven solutions designed to{" "}
+                <br className="sm:hidden block" /> optimize and elevate business
+                operations, <br className="sm:hidden block" /> empowering
+                organizations with advanced <br className="sm:hidden block" />
+                capabilities and efficiency.
+              </p>
+
+              <div className="bg-[#FF371A] mt-[25px] text-white rounded-[10px] max-w-[200px] text-center py-3 font-[400]  mx-auto">
+                <a href="">Arrange Discovery</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
