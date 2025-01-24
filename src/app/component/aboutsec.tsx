@@ -3,6 +3,16 @@
 import { useEffect, useState } from "react";
 import Link from "next/link"
 
+import { Merriweather } from '@next/font/google';
+
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  weight: ['300', '400', '700', '900'],
+  style: ['normal', 'italic'],
+  display: 'swap',
+});
+
+
 
 export default function Aboutsec() {
   const [showFullContent, setShowFullContent] = useState(false);
@@ -61,13 +71,13 @@ const handleClick = (buttonId: string) => {
 const getButtonClass = (buttonId: string) => {
   const baseClass = "text-[14px] font-[600] px-6 py-2 rounded-lg whitespace-nowrap transition-colors"
   if (buttonId === activeButton) {
-    return `${baseClass} bg-[#323232]/10 text-[#FF371A] underline`
+    return `${baseClass} bg-gradient-to-r from-yellow-400 to-purple-500 text-[white] underline`
   }
   return `${baseClass} text-[#FFFFFF] hover:text-white`
 }
 
   return (
-    <>
+    <div >
       <div className=" bg-first  ">
         <div className="py-[80px] max-w-[858px] xl:px-0 px-[16px] mx-auto  ">
           <div className="">
@@ -153,7 +163,7 @@ const getButtonClass = (buttonId: string) => {
         <Link href="#enrich">Enrich your Experiences</Link>
       </button>
       <button
-        className={`text-[14px] font-[600] px-6 py-2 bg-gradient-to-r from-yellow-400 to-purple-500 text-[#FFFFFF] rounded-lg whitespace-nowrap`}
+        className={`text-[14px] font-[600] px-6 py-2 text-[#FFFFFF] rounded-lg whitespace-nowrap`}
         onClick={() => handleClick("arrange")}
       >
         <Link href="#arrange">Arrange Discovery</Link>
@@ -579,6 +589,6 @@ const getButtonClass = (buttonId: string) => {
         </div>
       </div>
       </div>
-    </>
+    </div>
   );
 }
