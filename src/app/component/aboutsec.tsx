@@ -142,9 +142,10 @@ export default function Aboutsec() {
               <button className="px-8 py-3 bg-[#FF371A] text-white rounded-lg hover:bg-opacity-90 transition-colors">
                 Arrange Discovery
               </button>
-              <button className="px-8 py-3 border border-[#E2E2E4] text-white rounded-lg hover:bg-white/5 transition-colors">
+              {/* <button onClick={handleDownloadPDF}
+        disabled={isLoading} className="px-8 py-3 border border-[#E2E2E4] text-white rounded-lg hover:bg-white/5 transition-colors">
                 Get Brochure
-              </button>
+              </button> */}
               <button
                 className="px-8 py-3 rounded-lg hover:bg-white/5 transition-colors"
         onClick={handleDownloadPDF}
