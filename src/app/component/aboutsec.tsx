@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+// import jsPDF from "jspdf";
 
 import { Merriweather } from "next/font/google";
 
@@ -63,8 +64,32 @@ export default function Aboutsec() {
     return `${baseClass} text-[#FFFFFF] hover:text-white`;
   };
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleDownloadPDF = () => {
+    setIsLoading(true);
+
+    // File path to the PDF in the public folder
+    const fileName = "BOOST range Gradient Pitch deck  Presentation (A4) (3).pdf";
+    const filePath = `/${fileName}`;
+
+    // Create a temporary anchor element to trigger the download
+    const link = document.createElement("a");
+    link.href = filePath;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Simulate loading effect
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+  };
+
   return (
     <div>
+    
       <div className=" bg-first  ">
         <div className="py-[80px] max-w-[858px] xl:px-0 px-[16px] mx-auto  ">
           <div className="">
@@ -120,6 +145,23 @@ export default function Aboutsec() {
               <button className="px-8 py-3 border border-[#E2E2E4] text-white rounded-lg hover:bg-white/5 transition-colors">
                 Get Brochure
               </button>
+              <button
+                className="px-8 py-3 rounded-lg hover:bg-white/5 transition-colors"
+        onClick={handleDownloadPDF}
+        disabled={isLoading}
+        style={{
+          padding: "10px 20px",
+        
+          fontSize: "16px",
+          backgroundColor: isLoading ? "#ccc" : "transparent",
+          color: "white",
+          border: "1px solid #E2E2E4",
+          borderRadius: "5px",
+          cursor: isLoading ? "not-allowed" : "pointer",
+        }}
+      >
+        {isLoading ? "Generating..." : "Get Brochure"}
+      </button>
             </div>
           </div>
         </div>
@@ -595,7 +637,7 @@ export default function Aboutsec() {
               </p>
 
               <div className="bg-[#FF371A] mt-[25px] text-white rounded-[10px] max-w-[200px] text-center py-3 font-[400]  mx-auto">
-                <a href="">Arrange Discovery</a>
+                <a href="/mobilecontactform">Arrange Discovery</a>
               </div>
             </div>
           </div>
